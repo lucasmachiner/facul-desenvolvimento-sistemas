@@ -58,10 +58,10 @@
     }
 
     $numeroRaio = (float)$_GET['numeroRaio'];
-    $perimetro = ($numeroRaio * M_PI) * ($numeroRaio * M_PI);
+    $perimetro = M_PI * pow($numeroRaio, 2);
     $area = 2 * M_PI * $numeroRaio;
     if ($numeroRaio) {
-        echo "O perimetro e a area do seu redondo é: " . $perimetro . " - " . $area . "<br>";
+        echo "O perimetro e a area do seu redondo é: " . number_format($perimetro, 2, ",", ".") . " - " . number_format($area, 2, ",", ".") . "<br>";
     }
 
     $numero1 = $_GET["numero1"] ?? 0;
@@ -70,9 +70,9 @@
         echo "A soma dos dois números: " . ($numero1 + $numero2) . "<br>";
     }
 
-    $media = ((int)$_GET["nota1"] + (int)$_GET["nota2"] + (int)$_GET["nota3"]) / 3;
+    $media = number_format(((int)$_GET["nota1"] + (int)$_GET["nota2"] + (int)$_GET["nota3"]) / 3, 2, ",", ".");
     if ($media) {
-        echo "Sua média é: " . $media . "<br>";
+        echo "Sua média é: {$media} <br>";
     }
 
     $convertNumber = (float)$_GET["convertNumber"] * 100;
@@ -85,9 +85,9 @@
         echo "A area ao quadrada do seu quadrado é: " . $areaQuadrada . "<br>";
     }
 
-    $valorHrMes = (float)$_GET["valorHora"] * (float)$_GET["horasTrab"]
+    $valorHrMes = (float)$_GET["valorHora"] * (float)$_GET["horasTrab"];
     if($valorHrMes) {
-        echo "Seu"
+        echo "Seu valor de horas trabalhadas: " . $valorHrMes;
     }
     ?>
 
