@@ -89,6 +89,29 @@
     if($valorHrMes) {
         echo "Seu valor de horas trabalhadas: " . $valorHrMes;
     }
+
+    echo "<h1>Funções Uteis</h1>";
+    echo "<br>potencia: " . pow($areaQuadrada, 2);
+    echo "<br>Modulo Abs: " . abs($areaQuadrada);
+    echo "<br>Raiz Quadrada: " . sqrt($areaQuadrada);
+
+    echo "<br>Arrendodar: " . round($areaQuadrada);
+    echo "<br>Arrendodar para cima: " . ceil($areaQuadrada);
+    echo "<br>Arrendodar para baixo: " . floor($areaQuadrada);
+    echo "<br>Valor inteiro: " . intval($areaQuadrada);
+
+    //Declarar uma varivel apenas adicionamos $
+    //caso adicionamos dois $$ e chamos ja uma variavel declarada ele iria nomear essa nova variavel
+    //com o valor atribuido nela em primeiro e adcionar um novo valor caso esteja instanciado
+    //exemplo:
+    $teste = "test-1";
+    $$teste = "teste-2";
+
+    echo $teste;
+    echo $$teste;
+    
+
+
     ?>
 
 </body>
